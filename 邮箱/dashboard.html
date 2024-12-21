@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能邮箱系统</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/remixicon/3.5.0/remixicon.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="user-info">
+                <i class="ri-user-3-line"></i>
+                <span id="userEmail">用户邮箱</span>
+            </div>
+            <ul class="nav-links">
+                <li class="active" data-folder="inbox">
+                    <i class="ri-inbox-line"></i>
+                    收件箱
+                </li>
+                <li data-folder="sent">
+                    <i class="ri-send-plane-line"></i>
+                    已发送
+                </li>
+                <li data-folder="normal">
+                    <i class="ri-mail-check-line"></i>
+                    正常邮件
+                </li>
+                <li data-folder="spam">
+                    <i class="ri-spam-2-line"></i>
+                    垃圾邮件
+                </li>
+            </ul>
+            <button id="logoutBtn" class="logout-btn">
+                <i class="ri-logout-box-line"></i>
+                退出登录
+            </button>
+        </nav>
+        <main class="main-content">
+            <div class="email-list">
+                <div class="email-list-header">
+                    <h2>收件箱</h2>
+                    <button id="composeBtn" class="compose-btn">
+                        <i class="ri-add-line"></i>
+                        写邮件
+                    </button>
+                </div>
+                <div id="emailList">
+                    <!-- 邮件列表将通过JavaScript动态生成 -->
+                </div>
+            </div>
+            <div class="email-content" id="emailContent">
+                <!-- 邮件内容将通过JavaScript动态生成 -->
+            </div>
+        </main>
+    </div>
+
+    <!-- 写邮件的弹窗 -->
+    <div class="modal" id="composeModal">
+        <div class="modal-content">
+            <h2>
+                <i class="ri-mail-send-line"></i>
+                写邮件
+            </h2>
+            <form id="composeForm">
+                <div class="recipient-select">
+                    <select id="recipientEmail" required>
+                        <option value="">选择收件人</option>
+                    </select>
+                    <i class="ri-user-search-line"></i>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="emailSubject" placeholder="主题" required>
+                </div>
+                <div class="input-group">
+                    <textarea id="emailBody" placeholder="邮件内容" required></textarea>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="send-btn">
+                        <i class="ri-send-plane-line"></i>
+                        发送
+                    </button>
+                    <button type="button" class="cancel-btn" id="cancelCompose">
+                        <i class="ri-close-line"></i>
+                        取消
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html> 

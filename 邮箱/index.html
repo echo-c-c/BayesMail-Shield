@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能邮箱系统</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <!-- 背景动画 -->
+        <div class="background-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        
+        <!-- 主登录区域 -->
+        <div class="auth-container">
+            <div class="login-box">
+                <!-- 品牌区域 -->
+                <div class="brand">
+                    <i class="fas fa-envelope"></i>
+                    <h1>智能邮箱系统</h1>
+                    <p>欢迎使用智能邮箱系统</p>
+                </div>
+
+                <!-- 标签切换 -->
+                <div class="tabs">
+                    <button class="tab-btn active" data-form="login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        登录
+                    </button>
+                    <button class="tab-btn" data-form="register">
+                        <i class="fas fa-user-plus"></i>
+                        注册
+                    </button>
+                </div>
+
+                <!-- 表单容器 -->
+                <div class="form-container">
+                    <!-- 登录表单 -->
+                    <form id="loginForm" class="form-active">
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <input type="email" id="loginEmail" placeholder="请输入邮箱地址" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <input type="password" id="loginPassword" placeholder="请输入密码" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        <button type="submit" class="login-btn">
+                            <i class="fas fa-sign-in-alt"></i>
+                            登录
+                        </button>
+                    </form>
+
+                    <!-- 注册表单 -->
+                    <form id="registerForm">
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <input type="email" id="registerEmail" placeholder="请输入邮箱地址" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <input type="password" id="registerPassword" placeholder="请输入密码" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="password-strength" style="display: none;">
+                                密码强度：<span class="strength-text"></span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <input type="password" id="confirmPassword" placeholder="请确认密码" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="password-tips">
+                            <div class="tips-header">
+                                <i class="fas fa-info-circle"></i>
+                                密码要求：
+                            </div>
+                            <ul>
+                                <li><i class="fas fa-check"></i> 至少6个字符</li>
+                                <li><i class="fas fa-check"></i> 包含数字和字母</li>
+                                <li><i class="fas fa-check"></i> 不能包含特殊字符</li>
+                            </ul>
+                        </div>
+                        <button type="submit" class="login-btn">
+                            <i class="fas fa-user-plus"></i>
+                            注册
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 测试账户信息 -->
+            <div class="test-accounts">
+                <div class="test-accounts-box">
+                    <h2>
+                        <i class="fas fa-users"></i>
+                        测试账户
+                    </h2>
+                    <div class="account">
+                        <h3>普通用户账户</h3>
+                        <div class="account-info">
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>test1@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-lock"></i>
+                                <span>123456</span>
+                            </div>
+                            <button class="copy-btn" data-email="test1@example.com" data-password="123456">
+                                <i class="fas fa-copy"></i>
+                                一键填写
+                            </button>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <h3>普通用户账户</h3>
+                        <div class="account-info">
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>admin@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-lock"></i>
+                                <span>admin123</span>
+                            </div>
+                            <button class="copy-btn" data-email="admin@example.com" data-password="admin123">
+                                <i class="fas fa-copy"></i>
+                                一键填写
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html> 
